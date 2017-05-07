@@ -7,6 +7,18 @@ def word():
     answer= MASTER_LIST[index]
     return answer
 
+def user_guess():
+        try:
+            letter_guessed = str(input("What letter would you like to guess?"))
+            if len(letter) != 1:
+                print("Please choese only one letter.")
+            elif guessed._contains_(letter):
+                print("you have allready guessed that letter,")
+        except ValueError:
+            print ("Oops!  That was no valid letter.  Try again...")
+        letter_guessed = letter_guessed.lower()
+        return letter_guessed
+
 #the main 'game'
 def game():
     print("NEW GAME")
@@ -14,21 +26,13 @@ def game():
     answer = ""
     guess = ("")
     guessed = []
-    guesses = 10
+    lives = 10
     for letters in word():
         guess += "_ "
         answer += letters + " "
-    if guesses < 10:
-        try:
-            letter = int(input("What letter would you like to guess?"))
-            letter = letter.lower()
-            if len(letter) != 1:
-                print("Please choese only one letter.")
-            elif guessed._contains_(letter):
-                print("you have allready guessed that letter,")
-        except ValueError:
-            print ("Oops!  That was no valid number.  Try again...")
 
+    if lives != 0:
+        letter_guessed = user_guessed()
 
     else:
         print("game over")
