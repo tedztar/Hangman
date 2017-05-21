@@ -90,3 +90,7 @@ while games == 0:
 while games != 0:
     game()
     games -= 1
+
+#allows the user to see the answer/ if they win before the program closes
+print("")
+input("press 'enter' to close the program.")
