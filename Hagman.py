@@ -42,7 +42,7 @@ def game():
 
     # tells the user howmany letters in the word
     print("".join(guess))
-#    print("".join(answer))
+
     #makes the user only have 10 incorrect guesses
     while lives != 0 and guess != answer:
         letter_guessed = user_guess(guessed)
