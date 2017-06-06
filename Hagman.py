@@ -60,6 +60,7 @@ def game():
         print("")
         print("You have {} lives." .format(lives))
         print("".join(guess))
+        print(" you have guessed: " + "".join(guessed))
 
 
     print("game over")
